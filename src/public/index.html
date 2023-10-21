@@ -1,0 +1,30 @@
+
+<html>
+  <head>
+    <title>harbor cap heatmap</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <style>
+        #map {
+          height: 80%;
+        }
+        /* 
+         * Optional: Makes the sample page fill the window. 
+         */
+        html,
+        body {
+          height: 100%;
+          margin: 0;
+          padding: 0;
+        }
+    </style>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=__enter_gm_api_key_here__&callback=initMap&libraries=visualization&v=weekly"
+      defer
+    ></script>
+  </head>
+  <body>
+    <!-- prettier-ignore -->
+    <h1> harbor capitol investor locations </h1>
+    <div id="map"></div>
+  </body>
+</html>

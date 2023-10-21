@@ -1,0 +1,35 @@
+{
+  "name": "heatmapper",
+  "version": "1.0.0",
+  "description": "heatmaps stuff",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack-dev-server --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jakeshoemaker/heatmapper.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jakeshoemaker/heatmapper/issues"
+  },
+  "homepage": "https://github.com/jakeshoemaker/heatmapper#readme",
+  "dependencies": {
+    "@googlemaps/js-api-loader": "^1.16.2",
+    "dotenv": "^16.3.1",
+    "papaparse": "^5.4.1",
+    "stream": "^0.0.2"
+  },
+  "devDependencies": {
+    "csv-loader": "^3.0.5",
+    "html-webpack-plugin": "^5.5.3",
+    "node-polyfill-webpack-plugin": "^2.0.1",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}
