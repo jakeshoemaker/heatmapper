@@ -3,9 +3,16 @@
   <head>
     <title>harbor cap heatmap</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=__ENTER_GM_API_KEY_HERE__&libraries=visualization"
+      ></script>
+
+        <style>
         #map {
-          height: 80%;
+          height: 90%;
         }
         /* 
          * Optional: Makes the sample page fill the window. 
@@ -13,18 +20,22 @@
         html,
         body {
           height: 100%;
-          margin: 0;
-          padding: 0;
+          margin: 5px;
+          padding: 5px;
         }
+        button {
+          margin: 10px;
+        }
+
+        div { margin: 5px; }
     </style>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=__enter_gm_api_key_here__&callback=initMap&libraries=visualization&v=weekly"
-      defer
-    ></script>
   </head>
   <body>
     <!-- prettier-ignore -->
-    <h1> harbor capitol investor locations </h1>
-    <div id="map"></div>
+    <div class="flex flex-row">
+      <h1 class="text-3xl font-bold mr-4"> harbor capitol investor locations </h1>
+      <button class="bg-cyan-500 hover:bg-cyan-800 text-black font-bold rounded px-4" id="load-investors-btn"> load investors </button>
+    </div>
+      <div class= "flex" id="map"></div>
   </body>
 </html>
