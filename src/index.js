@@ -4,7 +4,6 @@ let heatmap_data = [];
 let coordinates = [];
 
 function load() {
-  console.log("ajax call started");
   $.ajax({
     url: "http://localhost:8000/coords",
     type: "GET",
@@ -20,9 +19,6 @@ function load() {
           new google.maps.LatLng(ll[0], ll[1])
         );
       });
-
-      console.log(coordinates.length);
-
       var map = new google.maps.Map(document.getElementById("map"), {
         center: { lat: 39.8283 , lng: -98.5795 },
         zoom: 6,
@@ -59,24 +55,3 @@ function load() {
 $(document).ready(function() {
   $('#load-investors-btn').on('click', load)
 });
-
-
-/*   
-  var heatmap_data = [];
-  geocoder = new google.maps.Geocoder();
-  var raw_zips = require('../data/harborcap.csv');
-  for (const rz of raw_zips) {
-    var zip = parseInt(rz['zipcode']);
-    if (!isNaN(zip)) {
-      if (zip.toString().length === 5) {
-        geocoder
-          .geocode({ 'address': 'zipcode '+ zip })
-          .then(( {results }) => {
-            heatmap_data.push(results[0].geometry.location);
-            return heatmap_data;
-          })
-          .catch(e => console.log(e));
-      }
-    }
-  };
-*/
